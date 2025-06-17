@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="academius.controller.DashboardController">
+
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="220.0" style="-fx-background-color: #f0f2f5; -fx-border-color: #e0e0e0; -fx-border-width: 0 1 0 0;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefHeight="80.0" prefWidth="220.0" text="Sistema Acadêmico" textFill="#333333">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <VBox spacing="8.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox fx:id="dashboardLink" onMouseClicked="#showDashboardView" alignment="CENTER_LEFT" style="-fx-background-color: #e6f7ff; -fx-background-radius: 5; -fx-cursor: hand;">
+                            <children>
+                                <Circle fill="#1890ff" radius="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                <Label text="Dashboard" textFill="#005a9e">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox fx:id="cursosLink" onMouseClicked="#showCursosView" alignment="CENTER_LEFT" style="-fx-background-radius: 5; -fx-cursor: hand;">
+                            <children>
+                                <Circle fill="TRANSPARENT" radius="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                <Label text="Cursos" textFill="#555555">
+                                    <font><Font size="14.0" /></font>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+    </center>
+</BorderPane>
